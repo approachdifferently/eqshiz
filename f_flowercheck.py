@@ -11,7 +11,7 @@ def flowercheck(char, df):
     filterflower = pd.DataFrame(filterflower)
     filterflower.drop(['Location','ID', 'Count','Slots','charn'], axis=1, inplace=True)
     print('###')
-    print(f'{char} got {filterflower.to_string(index=False, header=False)} flowers.\n ### \n Cards to finish all missing Flowerquests:')
+    print(f'{char} got\n{filterflower.to_string(index=False, header=False)} \n### \nCards to finish all missing Flowerquests:')
     #remove these flowers from item_counts table where flowername is matching, remove whole row
     flowerdf = flowerdf[~flowerdf['Flowername'].isin(filterflower['Name'])]
     
@@ -60,7 +60,8 @@ def flowercheck(char, df):
     merged_table = merged_table[merged_table['toget'] < 0]
     merged_table.reset_index(drop=True, inplace=True)
     merged_table['toget'] = merged_table['toget'].astype(int).abs()
-    print(merged_table.to_string(index=False))
+    print(merged_table.to_string(index=False, header=False))
+    print('###')
     flowneed= merged_table.copy()
     print(f'###Check for Flowers done on {char}###')
     print('######')
