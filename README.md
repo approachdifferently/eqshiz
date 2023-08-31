@@ -1,7 +1,7 @@
 # eqshiz - far from finished - enjoy
 
 ### features
-- "import inventory"-Function - no sheet output yet
+- "import inventory"-Function - *no sheet output yet*
    - imports inventory of all stored characters to have cross-character / account overview of your whole stash
 - "check Resist Flower Quest Status"-Function for specified character
    - queststatus check and shoppinglist as output
